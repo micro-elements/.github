@@ -1,0 +1,28 @@
+name: Build and Publish
+
+on:
+  workflow_call:
+    inputs:
+      username: 
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      #------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      #------------------------------
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.400
+      #-------------------------------
+      - name: Build and Publish
+        env:
+          UPLOAD_NUGET: ${{ secrets.UPLOAD_NUGET }}
+          UPLOAD_NUGET_API_KEY: ${{ secrets.UPLOAD_NUGET_API_KEY }}
+        run: ./build.sh --target GitHubActions --configuration Release
+      #-------------------------------
