@@ -1,7 +1,3 @@
-# MicroElements
+# MicroElements Shared Github Stuff
 
-My pet projects and experiments.
-
-Some elements become useful for other people
-
-Supported by @petriashev in his spare time
+Shared github stuff for all micro-elements projects
