@@ -1,6 +1,6 @@
 # MicroElements
 
-MicroElements because I like to create usfull micro components.
+MicroElements is because I like to create useful micro components.
 
 Grown from my pet projects and experiments.
 
